@@ -37,5 +37,5 @@ runs:
         docker push "$CONTAINER_FULL_IMAGE_NAME_WITH_TAG"
         echo $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
         echo "Deploying on CapRover..."
-        docker run caprover/cli-caprover:v2.2.3 caprover deploy -u ${{inputs.server}} -p ${{inputs.password}} -a ${{inputs.app}} -i $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
+        docker run caprover/cli-caprover:2.2.3 caprover deploy -u ${{inputs.server}} -p ${{inputs.password}} -a ${{inputs.app}} -i $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
       shell: bash
